@@ -102,7 +102,7 @@ query = st.text_input("Enter topic", category)
 # ------------------ FETCH NEWS ------------------
 if st.button("Get News"):
 
-    url = f"https://newsapi.org/v2/everything?qInTitle={query}&sortBy=publishedAt&apiKey={{api_key}"
+    url = f"https://newsapi.org/v2/everything?qInTitle={query}&sortBy=publishedAt&apiKey={api_key}"
 
     with st.spinner("Fetching latest news..."):
         r = requests.get(url)
